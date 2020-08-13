@@ -162,6 +162,8 @@ public class MainActivity extends AppCompatActivity {
             public boolean onQueryTextChange(String newText) {
 
                 if (newText.isEmpty()){
+                    tempSongFile.clear();
+                    tempSongName.clear();
                     tempSongFile.addAll(songss);
                     tempSongName.addAll(songName);
                     ArrayAdapter arrayAdapter1 = new ArrayAdapter<>(getApplicationContext(), R.layout.song_layout, R.id.textView, tempSongName);
